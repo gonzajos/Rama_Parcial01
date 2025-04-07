@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwwthymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet"/>
+    <title>Class Activities</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Lista de Actividades</h1>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Actividades
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                   <tr>
+                    <th>ID</th>
+                    <th>Descripcion</th>
+                    <th>Docente</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                   </tr>
+                   <tr th:each="act : ${activity}">
+                    <td th:text="${act.id}"></td>
+                    <td th:text="${act.description}"></td>
+                    <td th:text="${act.docente}"></td>
+                    <td th:text="${act.date}"></td>
+                    <td>
+                        <a class="btn btn-info" th:href="@{'/editar/'+${act.id}}">Editar</a>
+                        <a class="btn btn-danger" th:href="@{'/eliminar/'+${act.id}}" onclick="return confirm('Seguro desea eliminar este registro?')">Eliminar</a>
+                    </td>
+                   </tr>
+                </table>
+                <a class="btn btn-dark" href="/nuevo">Agregar Actividad</a>
+                <a class="btn btn-dark" href="/">Materias</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

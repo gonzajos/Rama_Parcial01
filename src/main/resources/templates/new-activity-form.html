@@ -1,0 +1,42 @@
+  <!DOCTYPE html>
+  <html lang="en" xmlns:th="http://wwwthymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Actividad</title>
+    <link th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Nueva Actividad</h1>
+        <div class="card">
+            <div class="card-header">
+                Agregar
+            </div>
+            <div class="card-body">
+                <form method="post" th:object="${activity}" th:action="@{/nuevo}">
+                    <input type="hidden" th:field="*{id}">
+                    <div class="mb-3">
+                        <label class="form-label" for="description">Description</label>
+                        <input class="form-control" type="text" id="description" th:field="*{description}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="docente">Docente</label>
+                        <input class="form-control" type="text" id="docente" th:field="*{docente}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="date">Fecha</label>
+                        <input class="form-control" type="text" id="date" th:field="*{date}">
+                    </div>
+                    
+
+                    <button class="btn btn-primary" type="submit">Guardar</button>
+                    <a class="btn btn-light" href="/activities">Regresar</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+  </body>
+  </html>
