@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📘 Proyecto RAMA - Registro Académico de Materias
 
 Este proyecto es parte del curso de **Programación Web** y permite el registro de materias con interfaz gráfica en Vaadin, utilizando Spring Boot, PostgreSQL y Docker. ¡Ya incluye las funciones de Agregar, Editar y Eliminar! 🙌
@@ -16,3 +17,7 @@ Este proyecto es parte del curso de **Programación Web** y permite el registro 
 ---
 
 ## 📦 Estructura del Proyecto
+=======
+# Rama_Parcial01
+Proyecto de Parcial No.1 de la Materia Desarrollo de Aplicaciones Web
+>>>>>>> b3c111456931a57e01c5100e57db6f432094a847
